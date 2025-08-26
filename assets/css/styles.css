@@ -1,1 +1,27 @@
-body{font-family:sans-serif;margin:0} .hero{height:100vh;display:flex;align-items:center;justify-content:center;}
+body{font-family:sans-serif;margin:0} 
+/* HERO */
+.hero{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  z-index: 2;
+  transition: opacity .5s ease, filter .5s ease;
+}
+
+/* Make the logo fit both width AND height of the viewport */
+.hero-logo{
+  max-width: 92vw;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain; /* keep aspect ratio inside the box */
+}
+
+/* (Optional) a tiny bump for larger screens */
+@media (min-width: 768px){
+  .hero-logo{ max-width: 820px; max-height: 80vh; }
+}
