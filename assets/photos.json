@@ -1,7 +1,30 @@
 [
   {
-    "src": "assets/img/logo.png",
-    "thumb": "assets/img/logo.png",
-    "caption": "Replace with your portfolio"
+    "src": "assets/img/portfolio/mantle_midway.jpeg",
+    "caption": "Mantle — midway through build"
+  },
+  {
+    "src": "assets/img/portfolio/mudroom_midway.jpeg",
+    "caption": "Mudroom — in progress"
+  },
+  {
+    "src": "assets/img/portfolio/mudroom_finished.jpeg",
+    "caption": "Mudroom — finished"
+  },
+  {
+    "src": "assets/img/portfolio/table_midway.jpeg",
+    "caption": "Table — midway through build"
+  },
+  {
+    "src": "assets/img/portfolio/table_finished2.jpeg",
+    "caption": "Table — finished"
+  },
+  {
+    "src": "assets/img/portfolio/waffle_midway.jpeg",
+    "caption": "Waffle ceiling — midway"
+  },
+  {
+    "src": "assets/img/portfolio/waffle_finished.jpeg",
+    "caption": "Waffle ceiling — finished"
   }
 ]
