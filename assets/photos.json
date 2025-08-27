@@ -1,30 +1,57 @@
 [
-  {
-    "src": "assets/img/portfolio/mantle_midway.jpeg",
-    "caption": "Mantle — midway through build"
-  },
-  {
-    "src": "assets/img/portfolio/mudroom_midway.jpeg",
-    "caption": "Mudroom — in progress"
-  },
-  {
-    "src": "assets/img/portfolio/mudroom_finished.jpeg",
-    "caption": "Mudroom — finished"
-  },
-  {
-    "src": "assets/img/portfolio/table_midway.jpeg",
-    "caption": "Table — midway through build"
-  },
-  {
-    "src": "assets/img/portfolio/table_finished2.jpeg",
-    "caption": "Table — finished"
-  },
-  {
-    "src": "assets/img/portfolio/waffle_midway.jpeg",
-    "caption": "Waffle ceiling — midway"
-  },
-  {
-    "src": "assets/img/portfolio/waffle_finished.jpeg",
-    "caption": "Waffle ceiling — finished"
-  }
+  { "src": "assets/img/portfolio/barn_door_pattern.jpeg",              "caption": "Barn door — pattern" },
+  { "src": "assets/img/portfolio/barn_door_pattern_setting.jpeg",      "caption": "Barn door — pattern (setting)" },
+  { "src": "assets/img/portfolio/barn_door_pattern_setting2.jpeg",     "caption": "Barn door — pattern (setting 2)" },
+
+  { "src": "assets/img/portfolio/barndoorglueup.jpeg",                 "caption": "Barn door — glue-up" },
+  { "src": "assets/img/portfolio/barndoorss.jpeg",                     "caption": "Barn door — assembly" },
+
+  { "src": "assets/img/portfolio/benchbreadboard.jpeg",                "caption": "Bench — breadboard end" },
+  { "src": "assets/img/portfolio/benchlegattach.jpeg",                 "caption": "Bench — leg attachment" },
+  { "src": "assets/img/portfolio/breadboarddetail.jpeg",               "caption": "Breadboard detail" },
+  { "src": "assets/img/portfolio/breadboardetail2.jpeg",               "caption": "Breadboard detail (2)" },
+
+  { "src": "assets/img/portfolio/cedarplanters.jpeg",                  "caption": "Cedar planters" },
+  { "src": "assets/img/portfolio/cedarplanters2.jpeg",                 "caption": "Cedar planters (set 2)" },
+  { "src": "assets/img/portfolio/cedarplanters3.jpeg",                 "caption": "Cedar planters (set 3)" },
+  { "src": "assets/img/portfolio/cedarplanters4.jpeg",                 "caption": "Cedar planters (set 4)" },
+
+  { "src": "assets/img/portfolio/dog_door_early.jpeg",                 "caption": "Dog door — early build" },
+  { "src": "assets/img/portfolio/dog_door_exterior_early.jpeg",        "caption": "Dog door — exterior (early)" },
+
+  { "src": "assets/img/portfolio/dogbedinsert.jpeg",                   "caption": "Dog bed insert" },
+
+  { "src": "assets/img/portfolio/foremen.jpeg",                        "caption": "Shop foreman" },
+  { "src": "assets/img/portfolio/legattach.jpeg",                      "caption": "Leg attachment" },
+
+  { "src": "assets/img/portfolio/mantle_midway.jpeg",                  "caption": "Mantle — midway" },
+
+  { "src": "assets/img/portfolio/mobileshopsetup.jpeg",                "caption": "Mobile shop setup" },
+  { "src": "assets/img/portfolio/mobileshopsetup2.jpeg",               "caption": "Mobile shop setup (2)" },
+
+  { "src": "assets/img/portfolio/mudroom.jpeg",                        "caption": "Mudroom" },
+  { "src": "assets/img/portfolio/mudroom_early.jpeg",                  "caption": "Mudroom — early" },
+  { "src": "assets/img/portfolio/mudroom_early2.jpeg",                 "caption": "Mudroom — early (2)" },
+  { "src": "assets/img/portfolio/mudroom_midway.jpeg",                 "caption": "Mudroom — midway" },
+  { "src": "assets/img/portfolio/mudroom_finished.jpeg",               "caption": "Mudroom — finished" },
+  { "src": "assets/img/portfolio/mudroomshelves.jpeg",                 "caption": "Mudroom shelves" },
+
+  { "src": "assets/img/portfolio/shoptablebuild.jpeg",                 "caption": "Shop table build" },
+
+  { "src": "assets/img/portfolio/tablecad.jpeg",                       "caption": "Table — CAD" },
+  { "src": "assets/img/portfolio/tableglueup.jpeg",                    "caption": "Table — glue-up" },
+  { "src": "assets/img/portfolio/tableglueup2.jpeg",                   "caption": "Table — glue-up (2)" },
+  { "src": "assets/img/portfolio/tablelegprep.jpeg",                   "caption": "Table — leg prep" },
+  { "src": "assets/img/portfolio/table_midway.jpeg",                   "caption": "Table — midway" },
+  { "src": "assets/img/portfolio/table_finished2.jpeg",                "caption": "Table — finished" },
+
+  { "src": "assets/img/portfolio/traddoorfinal.jpeg",                  "caption": "Traditional door — final" },
+  { "src": "assets/img/portfolio/trapdoor.jpeg",                       "caption": "Trap door" },
+  { "src": "assets/img/portfolio/trapdoorfinal2.jpeg",                 "caption": "Trap door — final" },
+
+  { "src": "assets/img/portfolio/waffleinitialassembly.jpeg",          "caption": "Waffle ceiling — initial assembly" },
+  { "src": "assets/img/portfolio/waffleassemblyline.jpeg",             "caption": "Waffle ceiling — assembly line" },
+  { "src": "assets/img/portfolio/wafflemidway.jpeg",                   "caption": "Waffle ceiling — midway" },
+  { "src": "assets/img/portfolio/waffle_midway.jpeg",                  "caption": "Waffle ceiling — midway (alt)" },
+  { "src": "assets/img/portfolio/waffle_finished.jpeg",                "caption": "Waffle ceiling — finished" }
 ]
