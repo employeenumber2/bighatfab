@@ -57,3 +57,15 @@ body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvet
 .footer-center a{ color:var(--ink); text-decoration:none; margin:0 8px }
 .footer-center a:hover{ text-decoration:underline }
 .footer-left{ color:var(--muted) }
+
+/* Social icons */
+.footer-right a {
+  color: var(--ink);
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  transition: color .2s ease;
+}
+.footer-right a:hover {
+  color: #d33; /* YouTube red-ish on hover, looks lively */
+}
