@@ -1,85 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — BigHat Fabrication</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <meta name="description" content="Learn about the story behind BigHat Fabrication, custom builds for home and office.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • BigHat Fabrication</title>
   <style>
-    .about-logo {
-      display: block;
-      margin: 40px auto 20px auto;
-      max-width: 240px; /* medium size */
-      height: auto;
+    :root {
+      --maxw: 720px;
+      --gap: 20px;
+      --brand: #000; /* black */
+      --text: #222;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --ring: rgba(0,0,0,.1);
+      --radius: 14px;
     }
-    .about-text {
-      max-width: 750px;
-      margin: 40px auto 60px auto;
-      padding: 0 28px;
-      font-size: 1.15rem; /* slightly larger than default */
-      line-height: 1.7;
-      text-align: justify;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: var(--bg); line-height: 1.6;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     }
-    .about-footer {
-      text-align: center;
-      padding: 25px 15px;
-      border-top: 1px solid #eee;
+
+    /* Header with centered logo */
+    header {
+      padding: 32px 16px 12px;
+      display: grid; place-items: center;
     }
-    .about-footer .brand {
-      font-weight: 600;
-      margin-bottom: 12px;
+    .logo-link { display: inline-block; text-decoration: none; }
+    .logo {
+      width: 132px; height: auto; display: block;
+      filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+      transition: transform .18s ease;
     }
-    .about-footer .social a {
-      margin: 0 8px;
-      color: var(--ink);
-      display: inline-flex;
-      align-items: center;
-      transition: color .2s ease;
+    .logo-link:hover .logo { transform: scale(1.04); }
+
+    main { padding: 12px 16px 56px; }
+
+    .prose { max-width: var(--maxw); margin: 0 auto; text-align: justify; text-justify: inter-word; }
+    .prose p { margin: 0 0 1em; }
+
+    /* Sign-off centered and separated */
+    .signoff {
+      max-width: var(--maxw); margin: 2.0em auto 0; text-align: center; font-style: italic;
     }
-    .about-footer .social a:hover {
-      color: #d33; /* lively hover */
+
+    /* Contact button beneath sign-off */
+    .cta-wrap { display: grid; place-items: center; margin-top: 14px; }
+    .btn {
+      display: inline-block; border: 0; background: var(--brand); color: #fff;
+      padding: 12px 22px; border-radius: var(--radius); font-weight: 600; text-decoration: none;
+      box-shadow: 0 2px 0 var(--ring);
+      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.12); }
+    .btn:active { transform: translateY(0); box-shadow: 0 2px 0 var(--ring); }
+
+    /* Footer — mirror index style with centered nav buttons */
+    footer {
+      margin-top: 56px; padding: 28px 16px; border-top: 1px solid #e5e7eb; color: var(--muted);
+    }
+    .footer-inner { max-width: 960px; margin: 0 auto; display: grid; gap: 12px; justify-items: center; text-align: center; }
+    .footer-brand { font-weight: 700; color: var(--text); }
+    .footer-nav { display: inline-flex; gap: 10px; flex-wrap: wrap; }
+    .footer-nav a {
+      display: inline-block; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 600;
+      color: #fff; background: var(--brand);
+    }
+    .footer-nav a:hover { opacity: .92; }
+    .small { font-size: .9rem; color: var(--muted); }
+
+    @media (min-width: 980px) {
+      .logo { width: 148px; }
+      .prose { font-size: 1.05rem; }
     }
   </style>
 </head>
-<body class="subpage">
-
-  <!-- Logo header -->
+<body>
   <header>
-    <a href="index.html">
-      <img src="assets/img/logo.png" alt="BigHat Fabrication logo" class="about-logo">
+    <!-- Replace the src path with the actual logo file in your repo (e.g., /assets/logo.svg or /images/logo.png) -->
+    <a class="logo-link" href="/" aria-label="Back to Home">
+      <img class="logo" src="/assets/logo.png" alt="BigHat Fabrication logo">
     </a>
   </header>
 
-  <!-- About copy -->
   <main>
-    <div class="about-text">
+    <div class="prose">
+      <!-- PASTE your existing About-page body text below. Keep paragraphs wrapped in <p> tags to preserve justification. -->
       <p>
-        It all started in 2018 when my wife asked me if I could make her a kitchen table. That project led to
-        barn doors, fireplaces, mantles, cabinets, bookshelves, entertainment centers, fancy dog kennels, planter boxes,
-        desks, conference tables, pantries, closets, laundry rooms, mudrooms, garages, workshops, storage rooms, TV
-        mounts, projectors, Sonos systems, security cameras, smart lighting/shades, home networking, and a landscaping project 
-        where I built a 60ft long retaining wall with built-in planter boxes and an outdoor sectional I lovingly call "The Ark". 
-        If you're looking for a custom solution for your home or office reach out and let us obsess over the details. Thanks for 
-        checking us out! –Jimmy
+        BigHat Fabrication builds custom furniture and built-ins with an emphasis on clean design, durable materials, and thoughtful details. We partner with homeowners and businesses to turn ideas into long‑lasting pieces that feel right at home.
       </p>
+      <p>
+        From initial sketches and material selection to shop fabrication and on‑site installation, we keep the process transparent and collaborative. If you’ve got a napkin drawing, a Pinterest board, or just a rough concept, we’ll help shape it into something real.
+      </p>
+    </div>
+
+    <p class="signoff">Thanks for checking us out! &ndash;Jimmy</p>
+
+    <div class="cta-wrap">
+      <!-- Replace the href below with your actual Google Form link -->
+      <a class="btn" href="https://forms.gle/your-form-id">Contact</a>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="about-footer">
-    <div class="brand">BigHat Fabrication</div>
-    <div class="social">
-      <a href="https://www.youtube.com/@bighatfab" aria-label="YouTube" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.12C19.382 3.5 12 3.5 12 3.5s-7.382 0-9.392.566a2.99 2.99 0 0 0-2.106 2.12C0 8.204 0 12 0 12s0 3.796.502 5.814a2.99 2.99 0 0 0 2.106 2.12C4.618 20.5 12 20.5 12 20.5s7.382 0 9.392-.566a2.99 2.99 0 0 0 2.106-2.12C24 15.796 24 12 24 12s0-3.796-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/bighatfab/" aria-label="Instagram" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.75-2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@bighatfab" aria-label="TikTok" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.004 2h4.005a5.99 5.99 0 0 0 5.991 5.997v4.006a9.99 9.99 0 0 1-5.99-1.999v7a7.999 7.999 0 1 1-7.998-7.998c.682 0 1.341.095 1.968.272v4.17a3.998 3.998 0 1 0 2.024 3.454V2z"/></svg>
-      </a>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">BigHat Fabrication</div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/" aria-label="Go to Home">Home</a>
+        <a href="https://forms.gle/your-form-id" aria-label="Open contact form">Contact</a>
+      </nav>
+      <div class="small">&copy; <span id="year"></span> BigHat Fabrication. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
