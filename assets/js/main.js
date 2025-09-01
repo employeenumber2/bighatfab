@@ -19,15 +19,10 @@ document.addEventListener('gesturestart', (e) => e.preventDefault());
 document.documentElement.style.touchAction = 'manipulation';
 
 /***************************
- * Photo grid + lightbox   *
+ * Photo grid (no clicks)  *
  ***************************/
 const MAX_SHOW = 26;
-
 const grid = document.getElementById('photo-grid');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCap = document.getElementById('lightboxCap');
-const lightboxClose = document.getElementById('lightboxClose');
 
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -42,10 +37,8 @@ function renderGrid(list) {
   grid.innerHTML = '';
   list.forEach(({ thumb, src, caption }) => {
     if (!src) return;
-    const a = document.createElement('a');
-    a.href = src;
-    a.className = 'grid-item';
-    a.dataset.caption = caption || '';
+    const tile = document.createElement('div');
+    tile.className = 'grid-item';
 
     const img = document.createElement('img');
     img.loading = 'lazy';
@@ -53,39 +46,8 @@ function renderGrid(list) {
     img.src = thumb || src;
     img.alt = caption || 'Portfolio image';
 
-    a.appendChild(img);
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      openLightbox(src, caption);
-    });
-
-    grid.appendChild(a);
-  });
-}
-
-function openLightbox(src, caption = '') {
-  if (!lightbox) return;
-  lightboxImg.src = src;
-  lightboxImg.alt = caption || 'Portfolio image';
-  lightboxCap.textContent = caption || '';
-  lightbox.classList.add('open');
-  lightbox.setAttribute('aria-hidden', 'false');
-}
-
-function closeLightbox() {
-  if (!lightbox) return;
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImg.src = '';
-}
-
-if (lightbox) {
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    tile.appendChild(img);
+    grid.appendChild(tile);
   });
 }
 
@@ -101,13 +63,12 @@ async function buildGrid() {
     const shuffled = shuffle(photos.slice());
     let pick = shuffled.slice(0, Math.min(MAX_SHOW, shuffled.length));
 
-    // Try not to repeat the previous set
+    // Avoid showing the exact same set back-to-back
     const last = (sessionStorage.getItem('lastPhotos') || '')
       .split(',')
       .filter(Boolean);
     const key = (p) => p.src;
     const isSameSet = (list) => list.every((p) => last.includes(key(p)));
-
     if (last.length && photos.length > MAX_SHOW) {
       let attempts = 6;
       while (attempts-- && isSameSet(pick)) {
