@@ -1,10 +1,3 @@
-// assets/js/main.js
-// -- simple + stable --
-// - Disables page zoom
-// - Loads assets/photos.json
-// - Shuffles and renders EXACTLY 26 tiles
-// - No lightbox/click handlers, no skip/retry logic
-
 /**********************
  * Disable page zoom  *
  **********************/
@@ -20,7 +13,7 @@ document.documentElement.style.touchAction = 'manipulation';
 /***************************
  * Photo grid (no clicks)  *
  ***************************/
-const MAX_SHOW = 26;
+const MAX_SHOW = 20;
 const grid = document.getElementById('photo-grid');
 
 function shuffle(arr) {
@@ -57,7 +50,7 @@ async function buildGrid() {
     const photos = await res.json();
     if (!Array.isArray(photos)) throw new Error('photos.json must be an array');
 
-    // shuffle and show 26
+    // shuffle and show 20
     const pick = shuffle(photos.slice()).slice(0, Math.min(MAX_SHOW, photos.length));
     render(pick);
   } catch (err) {
