@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <meta name="description" content="The story behind BigHat Fabrication — custom builds for home and office.">
   <style>
-    
     .about-logo{
       display:block;
       margin:48px auto 12px auto;
@@ -28,6 +27,39 @@
       margin:22px auto 10px auto;
       font-size:1.15rem;
       padding:0 32px;
+    }
+
+    /* Featured photo (~20% larger than a grid tile) */
+    .about-photo-wrap{
+      display:grid;
+      place-items:center;
+      margin:18px auto 54px auto;
+      padding:0 16px;
+    }
+    .about-photo{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:14px;
+      box-shadow:0 1px 3px rgba(0,0,0,.08);
+      /* mobile: grid is 2 cols → tile ≈ (vw - gaps)/2 ; make this ~20% larger */
+      max-width: calc((100vw - 3 * var(--grid-gap, 8px)) / 2 * 1.2);
+    }
+    /* tablet (your grid → 3 columns) */
+    @media (min-width:680px){
+      .about-photo{
+        max-width: calc((min(100vw, var(--maxw, 1100px)) - 4 * 12px) / 3 * 1.2);
+      }
+    }
+    /* desktop (your grid → 4 columns) */
+    @media (min-width:1024px){
+      .about-photo{
+        max-width: calc((var(--maxw, 1100px) - 3 * 14px) / 4 * 1.2);
+      }
+    }
+    /* safety cap on ultra-wide screens */
+    @media (min-width:1400px){
+      .about-photo{ max-width: 360px; }
     }
   </style>
 </head>
@@ -51,6 +83,12 @@
         for your home office; a new kitchen table; or a simple storage bench for your mudroom. The options are endless and we love 
         building it all. Reach out and let us obsess over the details, thanks!
       </p>
+    </div>
+
+    <!-- Fixed featured photo (never part of rotating grid) -->
+    <div class="about-photo-wrap">
+      <img src="assets/img/tables.jpeg" alt="Featured BigHat Fabrication project" class="about-photo">
+    </div>
   </main>
 
   <!-- Footer (same layout style as index) -->
@@ -64,7 +102,7 @@
       </nav>
       <div class="footer-right social">
         <a href="https://www.instagram.com/bighatfab/" aria-label="Instagram" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.75-2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3-3V7a3 3 0 0 0-3-3h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.75-2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
         </a>
         <a href="https://www.pinterest.com/bighatfab/" aria-label="Pinterest" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.26 2 11.74c0 3.86 2.29 7.2 5.6 8.79-.08-.75-.16-1.91.03-2.74.18-.77 1.2-5.19 1.2-5.19s-.31-.63-.31-1.57c0-1.47.85-2.57 1.91-2.57.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.86 3.5-.25 1.05.54 1.91 1.6 1.91 1.93 0 3.42-2.04 3.42-4.99 0-2.61-1.88-4.44-4.56-4.44-3.11 0-4.93 2.33-4.93 4.74 0 .94.36 1.95.81 2.49.09.11.1.21.07.33-.08.36-.27 1.15-.31 1.31-.05.22-.17.26-.4.16-1.5-.7-2.44-2.9-2.44-4.66 0-3.8 2.76-7.29 7.96-7.29 4.18 0 7.43 2.97 7.43 6.93 0 4.15-2.61 7.49-6.24 7.49-1.22 0-2.37-.64-2.77-1.38l-.75 2.87c-.27 1.04-1 2.34-1.49 3.14 1.12.34 2.31.52 3.56.52 5.52 0 10-4.26 10-9.74C22 6.26 17.52 2 12 2z"/></svg>
