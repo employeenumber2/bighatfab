@@ -13,7 +13,7 @@ document.documentElement.style.touchAction = 'manipulation';
 /***************************
  * Photo grid (no clicks)  *
  ***************************/
-const MAX_SHOW = 20;
+const MAX_SHOW = 24;
 const grid = document.getElementById('photo-grid');
 
 function shuffle(arr) {
@@ -50,7 +50,7 @@ async function buildGrid() {
     const photos = await res.json();
     if (!Array.isArray(photos)) throw new Error('photos.json must be an array');
 
-    // shuffle and show 20
+    // shuffle and show 24
     const pick = shuffle(photos.slice()).slice(0, Math.min(MAX_SHOW, photos.length));
     render(pick);
   } catch (err) {
